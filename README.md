@@ -52,15 +52,15 @@ model text is never accepted as a successful stage result.
 
 ## HTTP API (preview)
 
-A stateless FastAPI app exposes live single-call evaluation. It normalizes a
-labeled transcript in memory and runs classification plus the three judges
-through the same canonical path as the batch pipeline — no run filesystem is
-touched, so it deploys to serverless hosts (e.g. Vercel).
+A stateless FastAPI app exposes live single-call evaluation and a small served
+frontend. It normalizes a labeled transcript in memory and runs classification
+plus the three judges through the same canonical path as the batch pipeline — no
+run filesystem is touched, so it deploys to serverless hosts (e.g. Vercel).
 
 The ASGI app lives in the installed package (`confido_eval.webapp:app`), so it
-runs from any working directory once installed. Thin re-export shims exist for
-each runtime: `app/main.py` (`app.main:app`) for local dev and `api/index.py`
-for Vercel.
+runs from any working directory once installed. `main:app` (root `main.py`) is
+the deployment entrypoint (running `python main.py` still invokes the CLI);
+`app/main.py` (`app.main:app`) is a convenience shim for local dev.
 
 Credentials load from the same `.env` as the CLI (set `GEMINI_API_KEY` there), or
 from real environment variables. On Vercel there is no `.env`, so set the env var
@@ -69,19 +69,20 @@ in the dashboard.
 ```bash
 uv sync --extra dev
 uv pip install -e '.[api]'
-# Runs from any directory (config, prompts, and .env resolve from the package, not cwd):
+# Any of these work; config, prompts, and .env resolve from the package, not cwd:
+uv run uvicorn main:app --reload            # deployment entrypoint
 uv run uvicorn confido_eval.webapp:app --reload
-# Or, from the repo root: uv run uvicorn app.main:app --reload
 
+# Then open http://localhost:8000/ for the UI, or call the API directly:
 curl -s -X POST localhost:8000/analysis \
   -H 'content-type: application/json' \
   -d '{"transcript":"Agent: How can I help?\nUser: I need to reschedule my appointment."}'
 ```
 
-`GET /health` reports whether `GEMINI_API_KEY` is present (never the value) and
-the configured models. For Vercel, import the repo in the dashboard, set
-`GEMINI_API_KEY`, and use Python 3.12; `vercel.json` routes all requests to the
-function and sets a 60s `maxDuration` (a Pro-plan limit). Audio calls and
+`GET /` serves the frontend; `GET /health` reports whether `GEMINI_API_KEY` is
+present (never the value) and the configured models. For Vercel, `vercel.json`
+selects the `fastapi` framework preset, which serves `main:app`; import the repo
+in the dashboard, set `GEMINI_API_KEY`, and use Python 3.12. Audio calls and
 auth/rate-limiting are out of scope for this preview. A hardened service API
 remains a roadmap item (`docs/roadmap.md`, P2).
 
