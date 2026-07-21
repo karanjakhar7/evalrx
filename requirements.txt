@@ -1,0 +1,5 @@
+# Vercel installs this during the build. Installing the project (with the `api`
+# extra) builds the wheel via hatchling, which bundles prompts/ and eval.toml
+# into confido_eval/assets/ so the serverless function needs no repo-relative
+# file reads.
+.[api]

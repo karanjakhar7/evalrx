@@ -1,0 +1,8 @@
+Speaker 0: Thank you for calling you're speaking with Sarah on a recorded line for English. Press 1. Thank you for calling. You are speaking with Sarah on a recorded line. For English, press 1.
+Speaker 1: You are speaking with Sarah on a recorded line. Can you please tell me who you are calling as?
+Speaker 2: I'm calling for Doctor. Massey, and we're here to set up here to be a call with him.
+Speaker 1: Thank you for letting me know. Just to clarify, is this a doctor to doctor call about a patient? Are you still there?
+Speaker 2: Yeah. I'm here.
+Speaker 1: Thank you for confirming since you are calling to set up a call with doctor Matty. And if this is a doctor to doctor conversation about a patient, I will connect you with our peer to peer team now. Are you still there?
+Speaker 2: Yes. I'm here.
+Speaker 1: You're calling to set up a doctor to doctor call with doctor Matty. I will connect you with our peer to peer team now.

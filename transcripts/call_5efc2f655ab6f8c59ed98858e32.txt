@@ -1,0 +1,13 @@
+Speaker 0: This call is being recorded for quality assurance. This call is being recorded for quality assurance. Thank you for calling. I am Robin, a virtual assistant. How can I help you today?
+Speaker 1: I wanna book an emergency visit with Doctor. Pereman.
+Speaker 0: Got it. Just to confirm, are you experiencing any urgent symptoms like sudden vision loss, severe pain in or around the eye, flashes of light, or anything similar? Can you please describe what is going on with your eyes?
+Speaker 1: I just have a really terrible long case of severe dry eye, and I'm having a flare up, and I need some help with it.
+Speaker 0: Thanks for sharing that. Severe dry eye flare ups can be very uncomfortable. Since you are requesting an emergency visit, I will send a message to our clinical team so a member can return your call promptly during our next available business hours. Before I do that, may I have your 1st and last name spelled out and your date of birth?
+Speaker 1: And date of birth is 04/05/1981.
+Speaker 0: Thanks. I have your name and your date of birth as 04/05/1981. Is that correct?
+Speaker 1: Yes.
+Speaker 0: Thank you. What is the best phone number for our team to call you back? Thanks. Can you briefly describe your symptoms or what you would like the doctor to know about your dry eye flare up? This will help the team prepare for your callback.
+Speaker 1: Everyone's been a great while. I have a really bad flare up. And on Friday night, as I was sleeping, going into Saturday morning, I must have opened my eyes too quickly. And, actually, both my eyes scratched. And since then, my vision is blurry, and I'm sure it's just temporary. But in the meantime, I'm not in pain. It doesn't hurt, but it's just uncomfortable and frustrating with the vision. So I'm just wondering if doctor Peregrine can please take a look.
+Speaker 0: Please wait while I create a callback request. I have sent your message to our clinical team. A staff member will return your call promptly during our next available business hours to help arrange an urgent visit with Doctor. Periman. Is there anything else I can help you with today?
+Speaker 1: That's it. Thank you.
+Speaker 0: Thank you for take care, and we hope you feel better soon.

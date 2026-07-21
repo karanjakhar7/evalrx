@@ -1,0 +1,20 @@
+Speaker 0: Thank you for calling. This is a medical emergency. Please hang up and dial 911 or head to the nearest ER. This is Sarah. I can help you with scheduling medical records, billing, prescription refills, prior auths, and other clinical questions. How can I help you?
+Speaker 1: I'd like to schedule an appointment.
+Speaker 0: Could I get your 1st name?
+Speaker 1: Yep.
+Speaker 0: And your last name? Got it. Could you spell your last name for me just to be sure?
+Speaker 1: Yeah.
+Speaker 0: And your date of birth?
+Speaker 1: 07/16/2004.
+Speaker 0: So that's 07/16/2004, correct?
+Speaker 1: Yeah, that's correct.
+Speaker 0: 1 moment while I look up your record by date of birth. Let me check your appointments.
+Speaker 2: Hi. See you in our system. Are you looking to book a new appointment, reschedule, cancel, or confirm an existing 1? Appointment.
+Speaker 1: A new appointment.
+Speaker 2: Before I get you scheduled, I see your insurance carrier is A Aetna. Is that still correct?
+Speaker 1: Yes.
+Speaker 2: And your member ID is That's still correct?
+Speaker 1: That's correct.
+Speaker 2: I see you were previously seen by Doctor. Wadwekar at our Gilbert office. Does Gilbert still work or would you like a different office?
+Speaker 1: It works.
+Speaker 2: What kind of appointment are you looking for? A regular follow-up, a diabetes check-in, or something specific like a thyroid biopsy?

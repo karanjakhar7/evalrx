@@ -1,0 +1,54 @@
+[models]
+classification = "gemini/gemini-3.1-flash-lite"
+agent_performance = "gemini/gemini-3.1-flash-lite"
+patient_experience = "gemini/gemini-3.1-flash-lite"
+safety_compliance = "gemini/gemini-3.1-flash-lite"
+
+[prompts]
+version = "v1"
+
+[runtime]
+concurrency = 4
+max_retries = 2
+temperature = 1.0
+classifier_max_tokens = 4096
+judge_max_tokens = 8192
+
+[audit]
+mandatory_confidence_below = 0.70
+classification_review_below = 0.75
+calibration_transcripts = 15
+development_transcripts = 10
+audio_development_calls = 3
+noncritical_pass_sample = 0.10
+mandatory_triggers = [
+  "critical_failure",
+  "uncertain_safety",
+  "poor_source_quality",
+  "unknown_workflow",
+  "conflicting_judges",
+  "low_confidence",
+]
+redaction_is_not_agent_failure = true
+
+[audit.cadence]
+identity_and_authorization = "20% weekly/batch"
+intent_and_routing = "10% monthly"
+information_capture_and_groundedness = "20% weekly/batch"
+workflow_execution = "risk-triggered"
+resolution_and_automation = "15% weekly/batch"
+recovery_and_escalation = "risk-triggered"
+listening_and_comprehension = "10% monthly"
+caller_effort_and_repetition = "10% monthly"
+clarity_and_coherence = "10% monthly"
+trust_and_transparency = "20% biweekly"
+closure_and_next_steps = "10% monthly"
+empathy_and_tone = "20% biweekly; wide CI"
+safety_gates = "100% failures/uncertain plus 10% passes"
+
+[paths]
+normalized = "data/normalized/calls.jsonl"
+runs = "runs"
+review = "review/working"
+outputs = "outputs"
+role_overrides = "config/speaker_role_overrides.toml"

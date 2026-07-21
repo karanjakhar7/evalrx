@@ -1,0 +1,26 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.uv-cache/
+
+.env
+.DS_Store
+
+# Generated evaluation data and model runs
+data/normalized/
+runs/
+review/working/
+outputs/
+local/
+
+*cache*
+
+Transcripts + Calls.zip
+Transcripts + Calls/

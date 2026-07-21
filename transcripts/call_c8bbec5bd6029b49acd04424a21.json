@@ -1,0 +1,231 @@
+{
+  "metadata": {
+    "transaction_key": "deprecated",
+    "request_id": "019f85f0-911b-74c0-a57e-b6bca926e664",
+    "sha256": "f2a1f94993abd5f7a999113ad5d488c6f57163f6be8a71d18c4281913471de8f",
+    "created": "2026-07-21T18:29:28.416000Z",
+    "duration": 97.25394,
+    "channels": 1.0,
+    "models": [
+      "c0244ab1-78fc-4baf-886a-2e3f17013da8"
+    ],
+    "model_info": {
+      "c0244ab1-78fc-4baf-886a-2e3f17013da8": {
+        "name": "medical-nova-3",
+        "version": "2026-05-18.18466",
+        "arch": "nova-3"
+      }
+    }
+  },
+  "results": {
+    "channels": [
+      {
+        "alternatives": [
+          {
+            "transcript": "Thank you for call For English, press 1.",
+            "confidence": 0.9980469,
+            "words": [
+              {
+                "word": "thank",
+                "start": 0.0,
+                "end": 0.48,
+                "confidence": 0.9941406,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "Thank"
+              },
+              {
+                "word": "you",
+                "start": 0.48,
+                "end": 0.64,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "you"
+              },
+              {
+                "word": "for",
+                "start": 0.64,
+                "end": 0.79999995,
+                "confidence": 0.99902344,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "for"
+              },
+              {
+                "word": "call",
+                "start": 0.79999995,
+                "end": 0.96,
+                "confidence": 0.52001953,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "call"
+              },
+              {
+                "word": "for",
+                "start": 2.96,
+                "end": 3.28,
+                "confidence": 0.8569336,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "For"
+              },
+              {
+                "word": "english",
+                "start": 3.28,
+                "end": 4.08,
+                "confidence": 0.9980469,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "English,"
+              },
+              {
+                "word": "press",
+                "start": 4.24,
+                "end": 4.56,
+                "confidence": 1.0,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "press"
+              },
+              {
+                "word": "1",
+                "start": 4.56,
+                "end": 4.88,
+                "confidence": 0.9914551,
+                "speaker": 0,
+                "speaker_confidence": 1.0,
+                "punctuated_word": "1."
+              }
+            ],
+            "paragraphs": {
+              "transcript": "\nSpeaker 0: Thank you for call For English, press 1.",
+              "paragraphs": [
+                {
+                  "sentences": [
+                    {
+                      "text": "Thank you for call For English, press 1.",
+                      "start": 0.0,
+                      "end": 4.88
+                    }
+                  ],
+                  "speaker": 0,
+                  "num_words": 8,
+                  "start": 0.0,
+                  "end": 4.88
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "utterances": [
+      {
+        "start": 0.0,
+        "end": 0.96,
+        "confidence": 0.87805176,
+        "channel": 0,
+        "transcript": "Thank you for call",
+        "words": [
+          {
+            "word": "thank",
+            "start": 0.0,
+            "end": 0.48,
+            "confidence": 0.9941406,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "Thank"
+          },
+          {
+            "word": "you",
+            "start": 0.48,
+            "end": 0.64,
+            "confidence": 0.99902344,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "you"
+          },
+          {
+            "word": "for",
+            "start": 0.64,
+            "end": 0.79999995,
+            "confidence": 0.99902344,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "for"
+          },
+          {
+            "word": "call",
+            "start": 0.79999995,
+            "end": 0.96,
+            "confidence": 0.52001953,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "call"
+          }
+        ],
+        "speaker": 0,
+        "id": "bd608506-d3ba-4b2e-8d98-98b2792badba"
+      },
+      {
+        "start": 2.96,
+        "end": 4.08,
+        "confidence": 0.92749023,
+        "channel": 0,
+        "transcript": "For English,",
+        "words": [
+          {
+            "word": "for",
+            "start": 2.96,
+            "end": 3.28,
+            "confidence": 0.8569336,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "For"
+          },
+          {
+            "word": "english",
+            "start": 3.28,
+            "end": 4.08,
+            "confidence": 0.9980469,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "English,"
+          }
+        ],
+        "speaker": 0,
+        "id": "8fa270d3-b00b-4a43-8a22-f62b693925de"
+      },
+      {
+        "start": 4.24,
+        "end": 4.88,
+        "confidence": 0.99572754,
+        "channel": 0,
+        "transcript": "press 1.",
+        "words": [
+          {
+            "word": "press",
+            "start": 4.24,
+            "end": 4.56,
+            "confidence": 1.0,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "press"
+          },
+          {
+            "word": "1",
+            "start": 4.56,
+            "end": 4.88,
+            "confidence": 0.9914551,
+            "speaker": 0,
+            "speaker_confidence": 1.0,
+            "punctuated_word": "1."
+          }
+        ],
+        "speaker": 0,
+        "id": "87107938-497b-4003-b2cc-0b88238aec5b"
+      }
+    ]
+  }
+}

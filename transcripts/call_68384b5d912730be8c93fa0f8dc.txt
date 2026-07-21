@@ -1,0 +1,11 @@
+Speaker 0: Thank you for calling or speaking with Sarah on a recorded line. For English, press 1. You are speaking with Sarah on a recorded line. Can you please tell me who you are calling as?
+Speaker 1: Denise Barnes. Athens. Worker's Compensation.
+Speaker 0: Thank you, Denise. Are you calling to confirm an existing appointment for a patient, or is this about something else related to workers' compensation?
+Speaker 1: Appointment.
+Speaker 0: No problem. I can help with that. May I have the patient's 1st name? Thank you. And the patient's last name? Thank you. And what is date of birth?
+Speaker 1: 08/09/1974.
+Speaker 0: Thank you. That is 08/09/1974. Let me look up the information for you. I found the patient's chart. Let me pull up the appointment details for you. Is this for an upcoming appointment, or are you looking for information about a past visit?
+Speaker 1: Upcoming and past visit.
+Speaker 0: Pulling up your upcoming appointments. Does not have any upcoming appointments scheduled at the Oakland location. For past visits, here are the 3 most recent. 03/19/2026 with Edith Mraz, 02/19/2026 with Edith Mraz, 01/29/2026 with Edith Mraz. Talley made status recheck. Would you like the full list of past appointments, or is there a specific date or provider you are looking for?
+Speaker 1: No. No. Thank you. Thank you.
+Speaker 0: Thank you for calling. Have a great day.

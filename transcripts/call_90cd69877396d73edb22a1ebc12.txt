@@ -1,0 +1,11 @@
+Speaker 0: If this is a medical emergency, please hang up and dial 911. You are speaking with How can I help you?
+Speaker 1: I need to speak to a live person.
+Speaker 0: I can often help right away. Is this about an appointment, medications, or something else?
+Speaker 1: Medications
+Speaker 0: I can help with many medication requests right away. Are you looking for a prescription refill, a change to your medication, or something else related to your medication?
+Speaker 1: Prescription refill
+Speaker 0: To help with your prescription refill, what is your 1st name? And what is your date of birth?
+Speaker 1: Onetwenty fournineteen 69
+Speaker 0: Please wait while I find your record. I have found your record. What is the name and dosage of the medication you need a refill for?
+Speaker 1: Enbrel
+Speaker 0: Could you please tell me the name and dosage of the medication you would like to refill? I did not catch that. Could you please repeat the name and dosage of the medication you need a refill for? Can I speak to a live person please? Can I speak to a live person? I will connect you with our staff so they can assist you directly with your medication request. It looks like I was not able to connect you to a staff member just

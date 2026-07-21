@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Confido Analysis</title>
+  <style>
+    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      max-width: 860px; margin: 0 auto; padding: 1.5rem;
+      line-height: 1.45;
+    }
+    h1 { font-size: 1.4rem; margin: 0 0 .25rem; }
+    p.sub { margin: 0 0 1.25rem; opacity: .7; font-size: .9rem; }
+    label { display: block; font-weight: 600; margin: 0 0 .35rem; font-size: .9rem; }
+    textarea {
+      width: 100%; min-height: 180px; padding: .6rem .7rem; font: .85rem/1.5 ui-monospace, monospace;
+      border: 1px solid #8884; border-radius: 8px; background: #8881; resize: vertical;
+    }
+    .row { display: flex; gap: .75rem; align-items: center; margin: .75rem 0 0; }
+    button {
+      font: inherit; font-weight: 600; padding: .55rem 1.1rem; border: 0; border-radius: 8px;
+      background: #2563eb; color: #fff; cursor: pointer;
+    }
+    button:disabled { opacity: .55; cursor: default; }
+    .status { font-size: .85rem; opacity: .8; }
+    .error { color: #dc2626; font-weight: 600; }
+    .results { margin-top: 1.5rem; display: grid; gap: .9rem; }
+    .card { border: 1px solid #8884; border-radius: 10px; padding: .8rem .9rem; }
+    .card h2 { font-size: .95rem; margin: 0 0 .5rem; display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+    .badge { font-size: .7rem; font-weight: 700; padding: .12rem .5rem; border-radius: 999px; text-transform: uppercase; letter-spacing: .03em; }
+    .b-valid { background: #16a34a22; color: #16a34a; }
+    .b-invalid { background: #d9770622; color: #d97706; }
+    .b-failed { background: #dc262622; color: #dc2626; }
+    .b-review { background: #7c3aed22; color: #7c3aed; }
+    pre { margin: 0; padding: .6rem .7rem; background: #8881; border-radius: 8px; overflow-x: auto; font: .78rem/1.45 ui-monospace, monospace; }
+    details summary { cursor: pointer; font-size: .82rem; opacity: .8; margin-bottom: .4rem; }
+  </style>
+</head>
+<body>
+  <h1>Confido Analysis</h1>
+  <p class="sub">Paste a labeled call transcript and evaluate it live (classification + agent, experience, and safety judges).</p>
+
+  <label for="transcript">Transcript</label>
+  <textarea id="transcript" spellcheck="false">Agent: Thank you for calling the clinic, how can I help you today?
+User: Hi, I need to reschedule my appointment for next week.
+Agent: Of course. Can you confirm your date of birth so I can find your record?
+User: Sure, it's [DATE].
+Agent: Thank you. I see your appointment on Tuesday. What day works better for you?
+User: Could we do Thursday afternoon instead?
+Agent: You're all set for Thursday at 2pm. You'll get a confirmation text shortly.</textarea>
+
+  <div class="row">
+    <button id="run">Analyze</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div id="results" class="results"></div>
+
+  <script>
+    const STAGES = [
+      ["classification", "Classification"],
+      ["agent_performance", "Agent performance"],
+      ["patient_experience", "Patient experience"],
+      ["safety_compliance", "Safety & compliance"],
+    ];
+    const btn = document.getElementById("run");
+    const statusEl = document.getElementById("status");
+    const resultsEl = document.getElementById("results");
+
+    function badge(text, cls) {
+      const s = document.createElement("span");
+      s.className = "badge " + cls;
+      s.textContent = text;
+      return s;
+    }
+
+    function render(data) {
+      resultsEl.innerHTML = "";
+      const stages = data.stages || {};
+      for (const [key, title] of STAGES) {
+        const stage = stages[key];
+        if (!stage) continue;
+        const card = document.createElement("div");
+        card.className = "card";
+        const h = document.createElement("h2");
+        h.textContent = title + " ";
+        h.appendChild(badge(stage.validation_status, "b-" + stage.validation_status));
+        if (stage.requires_human_review) h.appendChild(badge("needs review", "b-review"));
+        card.appendChild(h);
+
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = "Result JSON";
+        details.appendChild(summary);
+        const pre = document.createElement("pre");
+        pre.textContent = JSON.stringify(stage.result ?? stage.validation_errors ?? {}, null, 2);
+        details.appendChild(pre);
+        card.appendChild(details);
+        resultsEl.appendChild(card);
+      }
+    }
+
+    async function analyze() {
+      const transcript = document.getElementById("transcript").value;
+      btn.disabled = true;
+      statusEl.className = "status";
+      statusEl.textContent = "Evaluating…";
+      resultsEl.innerHTML = "";
+      try {
+        const res = await fetch("/analysis", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ transcript }),
+        });
+        const body = await res.json();
+        if (!res.ok) {
+          statusEl.className = "status error";
+          statusEl.textContent = "Error " + res.status + ": " + (body.detail || "request failed");
+          return;
+        }
+        statusEl.textContent = "Done · model " + (body.run?.models?.classification || "");
+        render(body);
+      } catch (err) {
+        statusEl.className = "status error";
+        statusEl.textContent = "Request failed: " + err.message;
+      } finally {
+        btn.disabled = false;
+      }
+    }
+
+    btn.addEventListener("click", analyze);
+  </script>
+</body>
+</html>

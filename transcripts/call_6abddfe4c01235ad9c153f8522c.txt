@@ -1,0 +1,16 @@
+Speaker 0: Thank you for calling. If this is a medical emergency, please hang up and dial 911 or head to the nearest ER. This is Sarah. I can help you with scheduling medical records, billing, and prescription refills. How can I help you?
+Speaker 1: Scheduling
+Speaker 0: Could I get your 1st name? And your last name? Got it. Could you spell that for me just to be sure? And your date of birth?
+Speaker 1: 11/1385 So
+Speaker 0: that's 11/13/1985, correct?
+Speaker 1: Correct.
+Speaker 0: 1 moment while I look up your record by date of birth. Let me check your appointments.
+Speaker 2: See you in our system. Are you looking to book a new appointment, reschedule, cancel, or confirm an existing 1?
+Speaker 1: Book an appointment.
+Speaker 2: Before I get you scheduled, I'll need your insurance carrier and member ID. Could you grab your card?
+Speaker 1: Yes.
+Speaker 2: Great. What is your insurance carrier?
+Speaker 1: Cigna.
+Speaker 2: And what is your member ID? Updating your insurance on file? 1 moment. Got it. I've updated that on your record. I see you were previously seen by Doctor. Singh at our Mesa office. Does the Mesa office still work for you, or would you like a different office?
+Speaker 1: Yes. It works for me.
+Speaker 2: Perfect. What kind of appointments are you looking for? A regular follow-up, a diabetes check-in, or something specific like a thyroid biopsy? Labs. Thanks for letting me know. Since lab appointments are handled a bit differently, let me take a quick message and have our manager Bridget call you back to help with scheduling your labs. Could you please confirm your full name and the best callback number? Got it. Taking down your message now. Your request is in... Our manager, Bridget, will call you back to help schedule your lab appointment at the Mesa office. Is there anything else I can help you with today? No. Thanks for calling. Have a great day.

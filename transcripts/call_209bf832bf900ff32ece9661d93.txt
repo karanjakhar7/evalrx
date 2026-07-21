@@ -1,0 +1,21 @@
+Speaker 0: Thank you for call Our office is currently closed for the day and will reopen at 7AM. If this is a medical emergency, please hang up and dial 911. You are speaking with Sarah, a virtual assistant on a recorded line. Our normal office hours are Monday through Friday from 7AM to 5PM, with our phones open from 8AM to 04:30PM. How can I help you today?
+Speaker 1: Fill my prescription.
+Speaker 0: Okay. I can put in a request for a prescription refill. Please note that requests submitted after hours will not be reviewed until the next business day and can take up to 2 business days to process. Do you wish to continue? Yes. Are you requesting a prescription refill for yourself or for someone else? Myself. Can I get your 1st name, please? I want to make sure I have your information correct. Can you please tell me your 1st name? Got it. And what is your last name? Just to confirm, your last name is spelled is that correct? No. Can you please spell your last name for me? Thank you for spelling that. So your last name is Is that correct?
+Speaker 1: No.
+Speaker 0: I apologize for the confusion. Could you please spell your last name 1 more time slowly? Thank you. I have your last name that correct? Yes. Perfect. What is your date of birth?
+Speaker 1: Threesevennineteen 90.
+Speaker 0: Just to confirm, your date of birth is 03/07/1990. Is that correct? Yes. Who is your primary care provider?
+Speaker 1: Samantha.
+Speaker 0: Thank you. I do not see a provider named Samantha. Could you please provide the last name of your provider or let me know if you would like to choose from the following providers? Nathan Gean, Heather Moore, Nicholas Coppins, Hannah Stutz, Kaitlyn Devlin, Cassidy Abrahamson, or Thea Murphy?
+Speaker 1: Samantha Skarsgard.
+Speaker 0: Thank you for clarifying. I do not have a provider named Samantha listed. Would you like to select from the following providers, Nathan Jean, Heather Moher, Nicholas Coppins, Hannah Stutz, Kaitlyn Devlin, Cassidy Abrahamson, or Thea Murphy? Or if you are unsure, I can have the team check your primary care provider on file. Would you prefer?
+Speaker 1: Check my primary care on file.
+Speaker 0: Thank you. Please list all the names of the medications you would like refilled.
+Speaker 1: Adderall 30 milligrams.
+Speaker 0: Got it. Can I get the dosage instructions for Adderall? For example, how many times per day do you take it?
+Speaker 1: 30 milligrams once a day.
+Speaker 0: Thank you. What is the name and location of your pharmacy?
+Speaker 1: Walgreens, Kittery Main.
+Speaker 0: What is a good time to call you back during business hours if we have any questions?
+Speaker 1: Anytime.
+Speaker 0: Best number for the callback? Yes. Yes. Thank you. I have submitted your prescription refill request. It will be reviewed on the next business day. Is there anything else I can help you with today?
