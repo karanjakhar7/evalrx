@@ -5,6 +5,8 @@ It normalizes transcript and audio sources, classifies each interaction, runs
 separate agent-performance, patient-experience, and safety judges, and routes
 uncertain or high-risk results to human review.
 
+**Live website:** [evalrx.vercel.app](https://evalrx.vercel.app/)
+
 ## Documentation
 
 - [Architecture](docs/architecture.md) — system boundaries, data flow, execution,
