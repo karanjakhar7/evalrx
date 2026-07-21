@@ -59,8 +59,7 @@ run filesystem is touched, so it deploys to serverless hosts (e.g. Vercel).
 
 The ASGI app lives in the installed package (`confido_eval.webapp:app`), so it
 runs from any working directory once installed. `main:app` (root `main.py`) is
-the deployment entrypoint (running `python main.py` still invokes the CLI);
-`app/main.py` (`app.main:app`) is a convenience shim for local dev.
+the deployment entrypoint (running `python main.py` still invokes the CLI).
 
 Credentials load from the same `.env` as the CLI (set `GEMINI_API_KEY` there), or
 from real environment variables. On Vercel there is no `.env`, so set the env var

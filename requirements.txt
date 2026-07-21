@@ -162,3 +162,10 @@ yarl==1.24.5
     # via aiohttp
 zipp==4.1.0
     # via importlib-metadata
+
+# --- Added for the Vercel FastAPI deployment ---
+# fastapi is the web framework; `.` installs the confido_eval package itself
+# (bundling prompts, config, and the static frontend into the wheel) so the
+# serverless function can import it and read no loose repo files.
+fastapi>=0.115,<1
+.
