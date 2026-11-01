@@ -1,0 +1,26 @@
+# Python and build artifacts
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and credentials
+.venv/
+.uv-cache/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Private sources and generated evaluation artifacts
+data/
+runs/
+review/
+outputs/
+local/

@@ -1,0 +1,71 @@
+[project]
+name = "evalrx"
+version = "0.1.0"
+description = "EvalRX: auditable evaluation for healthcare voice agents"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115,<1",
+    "litellm>=1.87,<2",
+    "openpyxl>=3.1,<4",
+    "pydantic>=2.11,<3",
+    "python-dotenv>=1.2.2",
+    "typer>=0.16,<1",
+]
+
+[project.scripts]
+evalrx = "evalrx.cli:app"
+
+[project.optional-dependencies]
+api = [
+    "uvicorn>=0.30,<1",
+]
+transcription = [
+    "deepgram-sdk>=5,<6",
+]
+dev = [
+    "pytest>=8.4,<9",
+    "pytest-asyncio>=1.1,<2",
+    "ruff>=0.12,<1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/evalrx"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"config/eval.toml" = "evalrx/assets/config/eval.toml"
+"prompts/v1/classification.txt" = "evalrx/assets/prompts/v1/classification.txt"
+"prompts/v1/agent_performance.txt" = "evalrx/assets/prompts/v1/agent_performance.txt"
+"prompts/v1/patient_experience.txt" = "evalrx/assets/prompts/v1/patient_experience.txt"
+"prompts/v1/safety_compliance.txt" = "evalrx/assets/prompts/v1/safety_compliance.txt"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/evalrx",
+    "config/eval.toml",
+    "docs",
+    "tests",
+    "main.py",
+    "transcribe.py",
+    ".env.example",
+    "config/speaker_role_overrides.toml",
+    "prompts/v1/*.txt",
+    "README.md",
+    "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["live: opt-in provider smoke tests requiring EVALRX_LIVE_SMOKE=1"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

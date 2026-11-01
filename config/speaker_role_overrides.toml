@@ -1,0 +1,6 @@
+# Optional human-reviewed role assignments for diarized audio.
+# Numeric speaker labels remain unchanged; only the separate role field is updated.
+#
+# [audio_001]
+# "Speaker 0" = "agent"
+# "Speaker 1" = "counterparty"
